@@ -1,20 +1,19 @@
-c = [0, 1]
-k = 3
+c = ['0', '1']
+k = 5
 
 
 def print_de_bruijn_sequence(db_set, k):
-    db_str = kfill(db_set[0], k)
-    print(db_str)
-
-    for i in range(0, (len(db_set) ^ k)):
+    create_strings(db_set, "", len(db_set), k)
 
 
+def create_strings(s, p, l, k):
+    if k == 0:
+        print(p)
+        return
 
-def kfill(ch, k):
-    s_str = ""
-    for i in range(0, k):
-        s_str = s_str + str(ch)
+    for i in range(l):
+        p1 = p + s[i]
+        create_strings(s, p1, l, k-1)
 
-    return s_str
 
 print_de_bruijn_sequence(c, k)

@@ -23,5 +23,5 @@ def rotate_list_2(ilist, nplases):
     print(ilist)
 
 
-rotate_list_2(lst, 12)
+rotate_list_2(lst, 2)
 
